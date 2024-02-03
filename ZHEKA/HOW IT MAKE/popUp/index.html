@@ -6,7 +6,7 @@
 
 <head>
   <!-- Заголовок страницы в браузере -->
-  <title>FLEXBOX</title>
+  <title>Модальное окно. Попап.</title>
   <!-- Адаптив -->
   <meta name="viewport" content="width=device-width" />
   <!-- Подключаем CSS -->
@@ -19,10 +19,10 @@
 
 <body>
   <div class="wrapper">
-    <header class="header lock-padding">
+    <header id="header" class="header lock-padding">
       <div class="header__container _container">
         <a href="" class="header__logo"></a>
-        <a href="#popup" class="header__phone popup__link">Попап№1</a>
+        <a href="#popup" class="header__phone popup__link">Попап №1</a>
       </div>
     </header>
 
@@ -32,14 +32,87 @@
           <div class="content__body">
             <h1 class="content__title">Только вперед!</h1>
             <div class="content__text">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolore.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cumque, recusandae nisi quia accusantium
+                deleniti veritatis doloremque mollitia et obcaecati officia inventore ea unde soluta aspernatur ipsa
+                quibusdam quo, adipisci magnam tempora nulla dolore enim!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cumque, recusandae nisi quia accusantium
+                deleniti veritatis doloremque mollitia et obcaecati officia inventore ea unde soluta aspernatur ipsa
+                quibusdam quo, adipisci magnam tempora nulla dolore enim!</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro cumque, recusandae nisi quia accusantium
+                deleniti veritatis doloremque mollitia et obcaecati officia inventore ea unde soluta aspernatur ipsa
+                quibusdam quo, adipisci magnam tempora nulla dolore enim!</p>
             </div>
+          </div>
+          <a href="#image" class="content__image popup-link">
+            <img src="./img/4nonBLONDIES.jpg" alt="">
+          </a>
+        </section>
+        <section class="content__section">
+          <h2 class="content__subtitle">Живи, а работай в свободное время!</h2>
+          <div class="content__text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquid iusto deserunt, repudiandae sequi,
+              fugiat delectus recusandae aut nobis, ex ab libero inventore accusantium autem distinctio vitae veritatis!
+              Sed, mollitia?</p>
+            <p>Illo obcaecati aspernatur non, id nostrum dignissimos laboriosam nihil maiores minima beatae natus quo
+              nemo, voluptas tempore eum blanditiis. Possimus, facilis. Ex quaerat esse similique temporibus, sunt dolor
+              optio mollitia!</p>
+            <p>Id recusandae reprehenderit adipisci ipsum sequi earum eaque explicabo delectus neque reiciendis quo
+              molestiae sunt aut, hic quidem magni obcaecati voluptatibus quod incidunt, voluptas itaque officia? Sit
+              repudiandae corporis animi.</p>
+            <p>Soluta porro cum delectus quod sunt corporis quibusdam similique cupiditate odit sint eum repellendus
+              dolor molestiae consequatur vel modi ullam commodi beatae, explicabo facere reiciendis dolore eveniet.
+              Eius, rem! Blanditiis?</p>
+            <p>Corporis eaque, facere officiis maiores accusamus, vel optio deserunt possimus repellat aut obcaecati!
+              Laborum quae accusamus sit unde blanditiis illum possimus, cupiditate sint delectus sed incidunt animi
+              nemo accusantium labore.</p>
+            <p>
+              <a class="popup-link" href="popup2">Попап №2</a>
+              Voluptatibus temporibus, pariatur non aperiam veniam atque aliquid? Consequuntur sit reiciendis
+              modi ratione molestias officiis expedita saepe nulla. Delectus animi laborum earum blanditiis repellendus
+              voluptatem quaerat consequatur non! Maxime, soluta.
+            </p>
+            <p>Mollitia officia totam alias aut voluptatibus ipsam nemo maxime ratione nam eos expedita saepe sequi
+              distinctio architecto laborum at, incidunt molestiae fuga unde libero ipsa. Provident nihil modi ratione
+              quod!</p>
+            <p>Nemo veritatis repellat quos dignissimos magnam eaque praesentium, molestias vitae dolore impedit
+              nesciunt voluptate cumque necessitatibus velit, qui dicta iusto alias! Illo possimus provident tenetur
+              porro atque, excepturi assumenda amet.</p>
+            <p>Ratione modi eligendi aperiam dicta eos adipisci quaerat, ipsa a, sapiente itaque non maiores dolore,
+              voluptate error illo fuga reiciendis nihil recusandae alias sed iste. Iure repellendus officia unde
+              molestias.</p>
+            <p>Maiores, consequatur. Natus quo quae exercitationem praesentium impedit eaque veniam nihil possimus
+              maxime perferendis recusandae dolore earum dignissimos provident iure a perspiciatis tenetur quod
+              consectetur odio, dicta ab. Soluta, fugit.</p>
+            <p>Asperiores, velit? Ad, consectetur eaque autem ipsa voluptatibus, eum ex officiis sunt error libero et
+              quas nesciunt soluta neque pariatur! Magni asperiores, illo facere maxime odit harum natus temporibus
+              autem.</p>
           </div>
         </section>
       </div>
+    </div>
+  </div>
 
+  <div id="popup" class="popup">
+    <a href="##" class="popup__area"></a>
+    <div class="popup_body">
+      <div class="popup_content">
+        <a href="##" class="popup__close">&#10006</a>
+        <div class="popup__title">Это модальное окно №1</div>
+        <div class="popup__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, eaque quisquam
+          ipsa velit dolorem voluptates modi fuga dolorum odit obcaecati nam perspiciatis distinctio consequuntur
+          expedita delectus excepturi, voluptatibus, repellendus et dignissimos? Distinctio neque assumenda tenetur
+          corrupti repellat nam at quidem sunt maiores sed nesciunt accusantium consectetur minus eaque architecto aut
+          illum amet vel incidunt fugiat iusto dolor, nobis sint. Autem atque similique dicta animi. Debitis accusamus
+          quas dolorum dicta commodi reiciendis velit eius tempore omnis! Hic reiciendis molestiae explicabo voluptatem
+          architecto deleniti animi vel beatae qui sit? Voluptatem et blanditiis facilis sed, ut eligendi. Enim beatae
+          velit perferendis voluptatum. Quas officia reprehenderit nostrum quibusdam laudantium quidem iste deleniti,
+          dignissimos eum rerum debitis harum voluptate est voluptas nemo numquam dolorem, amet accusamus illum. Fugiat
+          distinctio repudiandae dicta veritatis illo possimus, modi id voluptas dolorum iure repellendus quibusdam
+          sapiente magnam aut. Harum ex sapiente dignissimos provident voluptate fugit beatae obcaecati eligendi
+          necessitatibus.</div>
+      </div>
     </div>
   </div>
 </body>
+
+</html>

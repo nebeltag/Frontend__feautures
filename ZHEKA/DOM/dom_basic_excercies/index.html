@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=" stylesheet" href="./style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div data-say-hi="yes">Привет!</div>
+
+  <ul>
+    <li>Корчи</li>
+    <li>Йончи</li>
+  </ul>
+
+  <div class="like"></div>
+  <div class="subscribe"></div>
+  <div class="like subscribe"></div>
+
+  <ul class="task4">
+    <li>Пункт №1</li>
+    <li>Пункт №2</li>
+  </ul>
+
+
+  <!-- Events -->
+
+  <div class="search__container">
+    Поиск
+    <form action="" class="searching__form">
+      <input type="text" class="searching__input" maxlength="15">
+      <span class="counter">Осталось символов<span></span></span>
+    </form>
+  </div>
+
+  <script>
+
+    // task 1
+
+    const dataElement = document.querySelector('[data-say-hi]');
+    console.log(dataElement);
+
+    console.log(dataElement.getAttribute("data-say-hi"));
+    console.log(dataElement.dataset.sayHi);
+
+
+    // task 2
+
+    const ulElement = document.querySelector('ul');
+    console.log(ulElement.lastElementChild.outerHTML);
+
+    // task 3
+
+    likeElements = document.querySelectorAll('.like');
+    console.log(likeElements);
+
+    // task 4
+
+    const list = document.querySelector('.task4');
+    list.insertAdjacentHTML('beforeend', '<li>Text</li>');
+
+    //Events
+
+    const searchBlock = document.querySelector('.search__container');
+
+    document.addEventListener("click", showInput);
+
+    function showInput(e) {
+
+      if (e.target.closest('.search__container')) {
+        searchBlock.classList.toggle('_active');
+      }
+
+      if (!e.target.closest('.search__container')) {
+        searchBlock.classList.remove('_active');
+      }
+    }
+
+    document.addEventListener("keyup", (e) => {
+      if (e.code === 'Escape') {
+        searchBlock.classList.remove('_active');
+      }
+    });
+
+    const txtItem = document.querySelector('.searching__input');
+    const txtItemLimit = txtItem.getAttribute('maxlength');
+    const txtCounter = document.querySelector('.counter span');
+
+    txtCounter.innerHTML = txtItemLimit;
+
+
+  </script>
+</body>
+
+</html>

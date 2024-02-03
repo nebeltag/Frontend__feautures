@@ -1,0 +1,165 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+  <!-- Заголовок страницы в браузере -->
+  <title>GRID LAYOUT</title>
+  <!-- Адаптив -->
+  <meta name="viewport" content="width=device-width" />
+  <!-- Подключаем CSS  -->
+  <link rel=" stylesheet" href="./css/style.css" />
+  <!-- Кодировка страницы -->
+  <meta charset="UTF-8">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+  <!-- Оболочка (grid-container) -->
+  <div class="wrapper">
+    <!-- Шапка (grid-element) -->
+    <header class="header">
+      <a href="#" class="header__logo"></a>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li>
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li>
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li>
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li>
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+        </ul>
+        <div class="header__burger">
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- Контент (grid-element + grid-container) -->
+    <main class="main">
+      <aside class="sidebar">
+        <nav class="sidebar__menu">
+          <ul class="sidebar__list">
+            <li>
+              <a href="#" class="sidebar__link">Пункт меню</a>
+            </li>
+            <li>
+              <a href="#" class="sidebar__link">Пункт меню</a>
+            </li>
+            <li>
+              <a href="#" class="sidebar__link">Пункт меню</a>
+            </li>
+            <li>
+              <a href="#" class="sidebar__link">Пункт меню</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <h1 class="content__title">GRID Layout practicum</h1>
+        <section class="content__gallery gallery">
+          <h1 class="gallery__title">Gallery</h1>
+          <div class="gallery__items">
+            <div class="gallery__item gallery__item_big">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item gallery__item_big">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+            <div class="gallery__item">
+              <img src="http://placebeard.it/640/480" alt="#">
+            </div>
+          </div>
+        </section>
+        <section class="content__products products">
+          <h2 class="products__title">Products</h2>
+          <section class="products__items">
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                recusandae veritatis voluptatum dolorum reiciendis. Dolore, fugit esse vitae sint maiores, animi itaque,
+                magni officia ad quia tempora beatae numquam! Neque.</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                odit?</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                odit?</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                odit?</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                odit?</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+            <div class="products__item">
+              <a href="#" class="products__image">
+                <img src="http://placekitten.com/200/300" alt="">
+              </a>
+              <a href="#" class="products__name">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt,
+                odit?</a>
+              <a href="#" class="products__button">Buy</a>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__copy">Copy, 2024</div>
+      <div class="footer__text">Lorem ipsum dolor sit amet.</div>
+    </footer>
+  </div>
+</body>
