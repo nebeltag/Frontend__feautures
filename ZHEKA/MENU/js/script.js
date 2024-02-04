@@ -88,29 +88,51 @@ function onMenuLinkClick(e) {
   }
 }
 
-const header = document.querySelector('.header');
+//header animation with window object
+// const header = document.querySelector('.header');
 
-window.addEventListener('scroll', showConsole);
+// window.addEventListener('scroll', showConsole);
 
-function showConsole() {
-  if (scrollY > 30) {
-    header.classList.add('_fixed');
-    console.log(`${scrollY} fixed`);
-    // window.removeEventListener('scroll', showConsole, { "once": true });
-  } else {
-    header.classList.remove('_fixed');
-    console.log('no fixed');
+// function showConsole() {
+//   if (scrollY > 30) {
+//     header.classList.add('_fixed');
+//     console.log(`${scrollY} fixed`);
+//     // window.removeEventListener('scroll', showConsole, { "once": true });
+//   } else {
+//     header.classList.remove('_fixed');
+//     console.log('no fixed');
 
+//   }
+// }
+
+//------------------------
+
+//header animation with Intersection Observer
+
+const blockObserver = new IntersectionObserver(
+  ([entry]) => {
+
+    if (!entry.isIntersecting && entry.intersectionRatio <= .9) {
+      header.classList.add('_fixed');
+      console.log("fixed");
+    } else {
+      header.classList.remove('_fixed');
+    }
+
+  },
+
+  {
+    rootMargin: "-150px",
   }
-}
+)
+document.querySelectorAll('.wrapper').forEach((el) => blockObserver.observe(el));
+const header = document.querySelector('.header');
+window.onload = console.log(window.pageYOffset);
+document.querySelectorAll('.page__section_1').forEach((el) => console.log(el));
 
 
-//window.addEventListener('scroll', showConsole, { "once": true });
 
-// const wrapper = document.querySelector('body');
-// wrapper.scrollTop = 150;
-// const el = wrapper.scrollTop;
-// console.log(el);
+
 
 
 
