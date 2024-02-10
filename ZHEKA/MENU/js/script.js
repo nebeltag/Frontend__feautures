@@ -111,25 +111,35 @@ function onMenuLinkClick(e) {
 
 const blockObserver = new IntersectionObserver(
   ([entry]) => {
-
-    if (!entry.isIntersecting && entry.intersectionRatio <= .9) {
-      header.classList.add('_fixed');
+    console.log(entry);
+    let h = entry.boundingClientRect.top;
+    console.log(h);
+    if (!entry.isIntersecting) {
+      document.querySelector('.header').classList.add('_fixed');
       console.log("fixed");
     } else {
       header.classList.remove('_fixed');
     }
-
   },
-
   {
-    rootMargin: "-150px",
+    //root: null,
+    rootMargin: "-140px 0px 0px",
   }
 )
-document.querySelectorAll('.wrapper').forEach((el) => blockObserver.observe(el));
+document.querySelectorAll('.fictive').forEach((el) => blockObserver.observe(el));
 const header = document.querySelector('.header');
 window.onload = console.log(window.pageYOffset);
-document.querySelectorAll('.page__section_1').forEach((el) => console.log(el));
+document.querySelectorAll('.fictive').forEach((el) => console.log(el));
 
+
+function rec(n) {
+  console.log(n);
+  if (n <= 0)
+    return
+  else rec(n - 1);
+}
+
+rec(10);
 
 
 
