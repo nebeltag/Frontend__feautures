@@ -60,7 +60,6 @@ if (iconMenu) {
 // Прокрутка при клике
 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener("click", onMenuLinkClick);
@@ -69,6 +68,7 @@ if (menuLinks.length > 0) {
 
 function onMenuLinkClick(e) {
   const menuLink = e.target;
+
   if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
     const gotoBlock = document.querySelectorAll(menuLink.dataset.goto);
     const gotoBlockValue = gotoBlock[0].getBoundingClientRect().top + pageYOffset
@@ -94,7 +94,7 @@ function onMenuLinkClick(e) {
 // window.addEventListener('scroll', showConsole);
 
 // function showConsole() {
-//   if (scrollY > 30) {
+//   if (scrollY > 30 && !document.body.classList.contains('_touch')) {
 //     header.classList.add('_fixed');
 //     console.log(`${scrollY} fixed`);
 //     // window.removeEventListener('scroll', showConsole, { "once": true });
@@ -109,37 +109,33 @@ function onMenuLinkClick(e) {
 
 //header animation with Intersection Observer
 
+
+const header = document.querySelector('.header');
+
 const blockObserver = new IntersectionObserver(
   ([entry]) => {
-    console.log(entry);
+    //console.log(entry);
     let h = entry.boundingClientRect.top;
-    console.log(h);
-    if (!entry.isIntersecting) {
+    //console.log(h);
+    if (!entry.isIntersecting && !document.body.classList.contains('_touch')) {
       document.querySelector('.header').classList.add('_fixed');
-      console.log("fixed");
+      //console.log("fixed");
     } else {
       header.classList.remove('_fixed');
     }
   },
   {
-    //root: null,
     rootMargin: "-140px 0px 0px",
   }
 )
+
 document.querySelectorAll('.fictive').forEach((el) => blockObserver.observe(el));
-const header = document.querySelector('.header');
-window.onload = console.log(window.pageYOffset);
-document.querySelectorAll('.fictive').forEach((el) => console.log(el));
+
+//window.onload = console.log(window.pageYOffset);
+//document.querySelectorAll('.fictive').forEach((el) => console.log(el));
 
 
-function rec(n) {
-  console.log(n);
-  if (n <= 0)
-    return
-  else rec(n - 1);
-}
 
-rec(10);
 
 
 

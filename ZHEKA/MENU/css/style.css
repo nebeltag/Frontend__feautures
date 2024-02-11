@@ -117,7 +117,6 @@ body._lock {
   top: -40px;
   left: 0;
   transition: all .3s ease;
-
 }
 
 .header__container {
@@ -370,5 +369,9 @@ body._touch .menu__list>li._active .menu__arrow {
   .menu__sub-link {
     font-size: 20px;
     color: #000;
+  }
+
+  .page {
+    padding: 100px 30px;
   }
 }
